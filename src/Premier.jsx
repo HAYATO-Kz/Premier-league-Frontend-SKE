@@ -52,10 +52,10 @@ const Premier = () => {
       <Row>
         <Col span={22} offset={1} className="card-container">
           <Tabs type="card" onChange={changeTab}>
-            <TabPane tab="ranking" key="ranking">
+            <TabPane tab="Ranking" key="ranking">
               <Ranking year={yearSelected} />
             </TabPane>
-            <TabPane tab="Statatistic" key="shotOnGoalAverageBySeason">
+            <TabPane tab="Shot on Goal" key="shotOnGoalAverageBySeason">
               <Ball
                 year={yearSelected}
                 data={data}
@@ -63,7 +63,7 @@ const Premier = () => {
                 dataIndex={"overallShotOnGoal"}
               />
             </TabPane>
-            <TabPane tab="Shot on Goal" key="ballPossessionAverageBySeason">
+            <TabPane tab="Ball Possession" key="ballPossessionAverageBySeason">
               <Ball
                 year={yearSelected}
                 data={data}

@@ -1,4 +1,12 @@
-import { BarChart, Bar, XAxis, YAxis, Cell, Tooltip } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Cell,
+  Tooltip,
+  LabelList
+} from "recharts";
 import React from "react";
 import { Table, Row, Col, Card } from "antd";
 import { getTeamColor } from "./rankColor";
@@ -72,6 +80,7 @@ const Ball = props => {
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={getTeamColor(entry.teamId)} />
           ))}
+          <LabelList dataKey="teamName" position="top" />
         </Bar>
       </BarChart>
       <Row>
